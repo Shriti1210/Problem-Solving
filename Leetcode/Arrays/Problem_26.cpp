@@ -34,3 +34,16 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
 */
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int removeDuplicates(vector<int>& nums) {
+        int index=0;
+        for (int i=1;i<nums.size();i++){
+             if(nums[i]!=nums[index]){
+                index++;
+                nums[index]=nums[i];
+             }
+        }
+        return index +1;
+}
